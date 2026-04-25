@@ -1,33 +1,18 @@
-number_file = open("file_management/integer_file_reader/numbers.txt")
+from integer_functionalities import IntegerFunctionalities
 
 number_list = []
-odd_number_list = []
-even_number_list = []
+file_name = "file_management/integer_file_reader/numbers.txt"
 
+number_file = IntegerFunctionalities.open_number_file(self, file_name)
 
 for line in number_file:
-    line = int(line.strip())
+    line = IntegerFunctionalities.make_number_integer(self, line)
     number_list.append(line)
 
 for number in number_list:
-    if number % 2 == 0:
-        number = str(number)
-        even_number_list.append(number)
-    else:
-        number = str(number)
-        odd_number_list.append(number)
+    even_numbers = IntegerFunctionalities.get_even(self, number)
+    odd_numbers = IntegerFunctionalities.get_odd(self, number)
+    even_numbers = ", ".join(even_numbers)
+    odd_numbers = ", ".join(odd_numbers)
 
-print(number_list)
-print(odd_number_list)
-print(even_number_list)
-
-odd_numbers = ", ".join(odd_number_list)
-even_numbers = ", ".join(even_number_list)
-
-odd_number_file = open("odd_numbers.txt", "w")
-even_number_file = open("even)numbers.txt", "w")
-
-odd_number_file.write(odd_numbers)    
-even_number_file.write(even_numbers)
-
-number_file.close()
+separate_file = IntegerFunctionalities.write_number_file(self, odd_numbers, even_numbers)
