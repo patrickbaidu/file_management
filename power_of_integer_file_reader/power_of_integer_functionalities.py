@@ -37,5 +37,12 @@ class IntegerFunctions:
     
 class WriteFile:
     
-    def __init__(self):
-        pass
+    def __init__(self, squared_integer, cubed_integer):
+        self.squared_integer = squared_integer
+        self.cubed_integer = cubed_integer
+    
+    def write_file(self):
+        squared_integer_file = open("double.txt", "w")
+        cubed_integer_file = open("triple.txt", "w")
+        squared_integer_file.write(self.squared_integer)
+        cubed_integer_file.write(self.cubed_integer)
