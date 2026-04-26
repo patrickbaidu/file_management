@@ -19,3 +19,14 @@ class InputText:
     def get_second_input():
         second_input = input("Are there more lines? y/n: ")
         return second_input
+    
+class Color:
+    purple = '\033[95m'
+    red = '\033[91m'
+    yellow = '\033[93m'
+    blue = '\033[94m'
+    cyan = '\033[96m'
+    bold = '\033[1m'
+    underline = '\033[4m'
+    end = '\033[0m'
+    green = '\033[92m'
