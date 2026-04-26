@@ -2,6 +2,7 @@ from student_grade_file_reader_functions import OpenFile
 from student_grade_file_reader_functions import StudentFile
 from student_grade_file_reader_functions import HighestGrade
 from student_grade_file_reader_functions import TopStudent
+from student_grade_file_reader_functions import Color
 
 file_name = "file_management/student_grade_file_reader/students_grades.txt"
 
@@ -21,7 +22,7 @@ try:
     student_names = TopStudent(student_name_list)
     top_student = student_names.get_top_student(highest_grade_index)
 
-    print(top_student, highest_grade)
+    print(f'{Color.yellow + Color.bold}{top_student}{Color.end}, {Color.bold}{highest_grade}{Color.end}')
 
 except:
     print("Error in handling the request.")
