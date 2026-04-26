@@ -13,11 +13,11 @@ class FileHandling:
 class InputText:
     
     def get_input():
-        user_input = input("Enter Line: ")
+        user_input = input(f"{Color.yellow + Color.bold}Enter Line: {Color.end}")
         return user_input
     
     def get_second_input():
-        second_input = input("Are there more lines? y/n: ")
+        second_input = input(f"{Color.blue + Color.bold}Are there more lines?{Color.end} {Color.green}y{Color.end}/{Color.red}n{Color.end}: ")
         return second_input
     
 class Color:
