@@ -22,6 +22,7 @@ try:
     student_names = TopStudent(student_name_list)
     top_student = student_names.get_top_student(highest_grade_index)
 
+    print(f'{Color.green + Color.bold}Top Student of the Class{Color.end}')
     print(f'{Color.yellow + Color.bold}{top_student}{Color.end}, {Color.bold}{highest_grade}{Color.end}')
 
 except:
