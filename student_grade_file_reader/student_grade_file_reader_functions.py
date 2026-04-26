@@ -33,6 +33,11 @@ class HighestGrade:
     def get_max_grade(self):
         max_grade = max(self.student_grade)
         return max_grade
+    
+    def get_grade_index(self):
+        index_grade = self.student_grade.index(HighestGrade.get_max_grade())
+        return index_grade
 
 class TopStudent:
     
+    def 
