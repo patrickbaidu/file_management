@@ -27,7 +27,7 @@ class IntegerFunctionalities:
     
     def open_number_file(self, filename):
         number_file = open(filename)
-        number_file.close()
+        return number_file
     
     def write_number_file(self, oddnumber, evennumber):
         odd_number_file = open("odd_numbers.txt", "w")
