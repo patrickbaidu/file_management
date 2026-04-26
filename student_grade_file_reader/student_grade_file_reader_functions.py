@@ -7,17 +7,16 @@ class OpenFile:
         grades_file = open(self.file_name)
         return grades_file
 
-class Student:
+class StudentFile:
     
-    def __init__(self, name, grade):
-        self.name = name
-        self.grade = grade
+    def __init__(self, grades_file):
+        self.grades_file = grades_file
     
-    def split_data_file(self, grades_file):
+    def split_data_file(self):
         student_name_list = []
         student_grade_list = []
         data_list = []
-        for data in grades_file:
+        for data in self.grades_file:
             data = data.replace(" = ", "")
             data = data.split()
             data_list.append(data)
@@ -31,3 +30,4 @@ class GradeFunctionalities:
     def __init__(self, student_grade):
         self.student_grade = student_grade
     
+    def get_max_grade(self)
