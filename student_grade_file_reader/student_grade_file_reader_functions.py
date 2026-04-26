@@ -25,9 +25,14 @@ class StudentFile:
             student_grade_list.append([1])
         return student_grade_list and student_name_list
     
-class GradeFunctionalities:
+class HighestGrade:
     
     def __init__(self, student_grade):
         self.student_grade = student_grade
     
-    def get_max_grade(self)
+    def get_max_grade(self):
+        max_grade = max(self.student_grade)
+        return max_grade
+
+class TopStudent:
+    
