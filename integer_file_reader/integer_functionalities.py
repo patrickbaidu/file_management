@@ -36,3 +36,15 @@ class NumberFunctionalities:
                 odd_number_list.append(odd_number)
         odd_number_list = ", ".join(odd_number_list)
         return odd_number_list
+
+class WriteFile:
+    
+    def __init__(self, even_numbers, odd_numbers):
+        self.even_numbers = even_numbers
+        self.odd_numbers = odd_numbers
+    
+    def write_file(self):
+        odd_number_file = open("odd_numbers.txt", "w")
+        even_number_file = open("even_numbers.txt", "w")
+        odd_number_file.write(self.odd_numbers)
+        even_number_file.write(self.even_numbers)
