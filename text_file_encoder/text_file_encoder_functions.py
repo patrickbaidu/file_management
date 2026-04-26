@@ -1,4 +1,4 @@
-class AppendFile:
+class FileHandling:
     
     def __init__(self, file_name):
         self.file_name = file_name
@@ -12,5 +12,10 @@ class AppendFile:
 
 class InputText:
     
-    def __init__(self):
-        pass
+    def __init__(self, input_text):
+        self.input_text = input_text
+    
+    def get_input(self):
+        for input in self.input_text:
+            append_input = FileHandling.append_file(input)
+        return append_input
