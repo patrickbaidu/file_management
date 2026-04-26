@@ -19,6 +19,13 @@ class IntegerFunctions:
             list_of_integers.append(integer)
         return list_of_integers
 
+    def square_integer(self, list_of_integers):
+        squared_integers_list = []
+        for integer in list_of_integers:
+            squared_integer = integer ** 2
+            squared_integers_list.append(squared_integer)
+        return squared_integers_list
+
 class WriteFile:
     
     def __init__(self):
