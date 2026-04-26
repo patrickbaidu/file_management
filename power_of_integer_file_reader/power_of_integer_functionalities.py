@@ -24,8 +24,17 @@ class IntegerFunctions:
         for integer in list_of_integers:
             squared_integer = integer ** 2
             squared_integers_list.append(squared_integer)
+        squared_integers_list = ", ".join(squared_integers_list)
         return squared_integers_list
-
+    
+    def cube_integer(self, list_of_integers):
+        cubed_integers_list = []
+        for integer in list_of_integers:
+            cubed_integer = integer ** 3
+            cubed_integers_list.append(cubed_integer)
+        cubed_integers_list = ", ".join(cubed_integers_list)
+        return cubed_integers_list
+    
 class WriteFile:
     
     def __init__(self):
