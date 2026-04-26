@@ -12,9 +12,9 @@ class NumberFunctionalities:
     def __init__(self, numbers):
         self.numbers = numbers
     
-    def get_number(self, numbers):
+    def get_number(self):
         list_of_numbers = []
-        for number in numbers:
+        for number in self.numbers:
             number = int(number.strip())
             list_of_numbers.append(number)
         return list_of_numbers
