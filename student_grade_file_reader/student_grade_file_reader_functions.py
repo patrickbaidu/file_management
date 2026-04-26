@@ -13,17 +13,25 @@ class StudentFile:
         self.grades_file = grades_file
     
     def split_data_file(self):
-        student_name_list = []
-        student_grade_list = []
         data_list = []
         for data in self.grades_file:
-            data = data.replace(" = ", "")
+            data = data.strip()
+            data = data.replace(" =", "")
             data = data.split()
             data_list.append(data)
+        return data_list
+    
+    def add_student_name(self, data_list):
+        student_name_list = []
         for data in data_list:
-            student_name_list.append([0])
-            student_grade_list.append([1])
-        return student_grade_list and student_name_list
+            student_name_list.append(data[0])
+        return student_name_list
+    
+    def add_student_grade(self, data_list):
+        student_grade_list = []
+        for data in data_list:
+            student_grade_list.append(data[1])
+        return student_grade_list
     
 class HighestGrade:
     

@@ -9,3 +9,6 @@ try:
     file = OpenFile(file_name)
     opened_file = OpenFile.open_file(file)
     student_file = StudentFile(opened_file)
+    
+    student_data_file = StudentFile.split_data_file()
+    
