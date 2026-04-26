@@ -7,15 +7,15 @@ class FileHandling:
         text_file = open(self.file_name, "a")
         return text_file
     
-    def append_file(self, text_file, input):
-        text_file.write(input)
+    def append_input(self, text_file, text_input):
+        text_file.write("\n" + text_input)
 
 class InputText:
     
-    def __init__(self, input_text):
-        self.input_text = input_text
+    def get_input():
+        user_input = input("Enter Line: ")
+        return user_input
     
-    def get_input(self):
-        for input in self.input_text:
-            append_input = FileHandling.append_file(input)
-        return append_input
+    def get_second_input():
+        second_input = input("Are there more lines? y/n: ")
+        return second_input
