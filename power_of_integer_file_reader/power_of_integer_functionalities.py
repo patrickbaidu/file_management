@@ -23,6 +23,7 @@ class IntegerFunctions:
         squared_integers_list = []
         for integer in list_of_integers:
             squared_integer = integer ** 2
+            squared_integer = str(squared_integer)
             squared_integers_list.append(squared_integer)
         squared_integers_list = ", ".join(squared_integers_list)
         return squared_integers_list
@@ -31,6 +32,7 @@ class IntegerFunctions:
         cubed_integers_list = []
         for integer in list_of_integers:
             cubed_integer = integer ** 3
+            cubed_integer = str(cubed_integer)
             cubed_integers_list.append(cubed_integer)
         cubed_integers_list = ", ".join(cubed_integers_list)
         return cubed_integers_list
