@@ -40,4 +40,10 @@ class HighestGrade:
 
 class TopStudent:
     
-    def 
+    def __init__(self, student_list):
+        self.student_list = student_list
+    
+    def get_top_student(self, index_grade):
+        top_student_index = index_grade
+        top_student = self.student_list.index(top_student_index)
+        return top_student
