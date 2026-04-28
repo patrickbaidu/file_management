@@ -21,6 +21,7 @@ class InputText:
         return second_input
     
 class Color:
+    
     purple = '\033[95m'
     red = '\033[91m'
     yellow = '\033[93m'
